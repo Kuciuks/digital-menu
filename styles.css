@@ -49,7 +49,7 @@ body{
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 3;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +64,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: aliceblue;
 }
 
@@ -128,6 +129,25 @@ article{
     grid-template-columns: 25% 75%;
     grid-template-areas: 'img h2'
                         'img p';
+}
+
+nav > div > img{
+    width: 34px;
+}
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+nav div{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    background-color: azure;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width:600px) {
