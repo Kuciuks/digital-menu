@@ -26,7 +26,7 @@ body{
 }
 
 .container-fluid{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-color: black;
     padding: 0px;
@@ -75,18 +75,23 @@ body{
     align-items: center;
     flex-direction: column;
     background-color: var(--second);
-    padding-top: 79px;
+    padding-top: 60px;
     color: white;
+}
+#ground-page h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
 }
 
 section{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     margin: 0px !important;
-    align-items: center;
-    justify-content: center;
     background-color: var(--second)
 }
 
@@ -146,6 +151,7 @@ article{
     box-shadow: 0 0 20px black inset;
     background-color: var(--third);
     border: 3px var(--fourth) solid;
+    margin: 2px !important;
 }
 
 article > div{
@@ -154,7 +160,7 @@ article > div{
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-areas: 'img h2'
-                        '. p';
+                        'img p';
 }
 
 article + div{
@@ -188,7 +194,7 @@ article:hover, article:focus{
 }
 
 nav{
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content:space-around;
@@ -199,25 +205,25 @@ nav{
     background-color: var(--third);
 }
 nav div{
-    height: 100%;
+    background-color: var(--third);
     margin: 10px;
-    background-color: var(--third);;
-    display: flex;
-    justify-content: space-around;
 }
 nav > div > img{
-    width: 34px;
+    width: 10px;
     animation: logoAnim 4s  infinite;
 }
 
-#bookBtn, #contactBtn{
-    background-color: #0E2954;
-    color: white;
-    width: 250px;
-    height: 50px;
-    border-radius: 2px;
-    box-shadow: 7px 7px 0px black;
-    border: 3px var(--fourth) solid;
+nav > div > button{
+    background-color: #0E2954 !important;
+    color: white !important;
+    padding: 0 !important;
+    height: 25px;
+    width: 45px;
+    border-radius: 0px !important;
+    box-shadow: 3px 3px 0px black;
+    border: 2px var(--fourth) solid !important;
+    font-size: .45rem !important;
+    margin-top: -5px;
 }
 
 #bookBtn:hover, #bookBtn:focus, #contactBtn:hover, #contactBtn:focus{
@@ -234,16 +240,30 @@ nav > div > img{
     }
 }
 @media only screen and (max-width:320px) {
+
+    #bookBtn::after{
+        content: "Book";
+        color:aliceblue;
+    }
+    #contactBtn::after{
+        content: "Contact";
+        color: antiquewhite;
+    }
+    #menuBtn::after{
+        content: "Menu";
+        color: antiquewhite;
+    }
+    #locationsBtn::after{
+        content: "Locations";
+        color: antiquewhite;
+    }
+
     article{
         height: 110px !important;
         margin: 0px;
         padding: 0px !important;
     }
 
-
-    #bookBtn, #contactBtn{
-        width: 90px !important;
-    }
 
     .img-div, .h2-div, .p-div{
         align-items: center;
@@ -252,6 +272,7 @@ nav > div > img{
     article > div{
         grid-template-columns: 40% 60% !important;
     }
+
 }
 
 @media only screen and (max-width:480px) {
@@ -260,9 +281,7 @@ nav > div > img{
         height: 180px;
     }
 
-    #bookBtn, #contactBtn{
-        width: 90px !important;
-    }
+
 
     article > div{
         grid-template-columns: 40% 60% !important;
@@ -270,9 +289,7 @@ nav > div > img{
 
 }
 @media only screen and (max-width:767px) {
-    #bookBtn, #contactBtn{
-        width: 150px;
-    }
+
 
     article > div{
         width: 100%;
