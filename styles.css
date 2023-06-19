@@ -92,57 +92,77 @@ section{
 
 .img-div{
     grid-area: img;
-    height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .h2-div{
     grid-area: h2;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:end;
     align-items: center;
+    flex-direction: column;
     text-align: center;
+}
+.h2-div > h2{
+    margin: 0;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+span{
+    width: 80%;
+    height: 1px;
+    background-color: wheat;
+    border-radius: 25px;
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+    margin: 7px 0 7px 0;
+    
 }
 
 .p-div{
     display: flex;
-    justify-content: center;
+    justify-content:baseline;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     grid-area: p;
+    width: 100%;
+}
+.p-div > p{
+    font-size: .6rem;
+    margin: 0 5px 0 0;
 }
 
 .img-div img{
-    width: 100%;
-    object-fit:contain;
-}
-
-.h2-div > h2{
-    font-size: 1rem;
-    font-weight: 500;
+    width: 100px;
 }
 
 article{
     width: 100%;
     height: auto;
     box-shadow: 0 0 20px black inset;
-    border: 1px solid black;
-    padding: 30px;
-    margin: 7px;
     background-color: var(--third);
     border: 3px var(--fourth) solid;
 }
 
 article > div{
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: grid;
     grid-template-columns: 35% 65%;
     grid-template-areas: 'img h2'
-                        'img p';
+                        '. p';
+}
+
+article + div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 article:hover, article:focus{
@@ -213,26 +233,39 @@ nav > div > img{
         transform: translate(7px, 7px);
     }
 }
+@media only screen and (max-width:320px) {
+    article{
+        height: 110px !important;
+        margin: 0px;
+        padding: 0px !important;
+    }
 
 
-@media only screen and (max-width:480px) {
     #bookBtn, #contactBtn{
-        width: 120px;
+        width: 90px !important;
     }
 
-    .h2-div h2{
-        font-size: 1.5rem !important;
-    }
-    .p-div p{
-        font-size: 1rem !important;
+    .img-div, .h2-div, .p-div{
+        align-items: center;
+        height: inherit !important;
     }
     article > div{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-areas: 'img h2'
-                            'img p';
+        grid-template-columns: 40% 60% !important;
+    }
+}
+
+@media only screen and (max-width:480px) {
+
+    article{
+        height: 180px;
+    }
+
+    #bookBtn, #contactBtn{
+        width: 90px !important;
+    }
+
+    article > div{
+        grid-template-columns: 40% 60% !important;
     }
 
 }
@@ -241,12 +274,6 @@ nav > div > img{
         width: 150px;
     }
 
-    .h2-div h2{
-        font-size: 2rem;
-    }
-    .p-div p{
-        font-size: 1.5rem;
-    }
     article > div{
         width: 100%;
         height: 100%;
