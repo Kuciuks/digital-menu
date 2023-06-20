@@ -115,7 +115,7 @@ section{
     width: 90%;
 }
 .h2-div > h2{
-    margin: 7px 0 0 0;
+    margin: 7px 7px 0 0;
     font-size: 0.7rem;
     font-weight: 500;
 }
@@ -125,14 +125,13 @@ span{
     background-color: wheat;
     border-radius: 25px;
     box-shadow: 0 0 3px rgb(255, 255, 255);
-    margin: 7px 0 7px 0;
-    
+    margin: 7px 7px 7px 0;
 }
 
 .p-div > p{
     font-size: .6rem;
-    margin: 0px !important;
     text-align: center;
+    margin: 0px 7px 0 0;
 }
 .h2-p-div{
     display: flex;
@@ -162,7 +161,7 @@ article > div{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 40% 60% !important;
+    grid-template-columns: 40% 60%;
     grid-template-areas: 'img h2p'
                         'img h2p';
 }
@@ -180,7 +179,20 @@ article:hover, article:focus{
     border: 2px var(--first) solid ;
 }
 
+.onSale-section{
+    display: flex;
+    justify-content:center;
+}
 
+.banner-div{
+    grid-area: banner;
+}
+.onSale-div{
+    grid-area: sale;
+}
+.onSale-div:nth-child(2){
+    margin: 0 35px 0 35px;
+}
 
 @keyframes logoAnim {
     25%{
@@ -244,7 +256,11 @@ nav > div > button{
     color: white;
 }
 nav > div > button:hover, nav > div > button:focus{
-    border: 2px white solid !important;
+    border: 1px white solid !important;
+}
+
+.banner-section, .onSale-section{
+    display: none;
 }
 @media only screen and (min-width:340px) and (max-width:480px) {
     nav > div > button {
@@ -294,6 +310,12 @@ nav > div > button:hover, nav > div > button:focus{
     #ground-page{
         padding-top: 40px;
     }
+    .topSide{
+        display: none;
+    }
+    .banner-section, .onSale-section{
+        display: none;
+    }
 }
 @media only screen and (min-width:481px) and (max-width:767px) {
     nav > div > button {
@@ -341,9 +363,16 @@ nav > div > button:hover, nav > div > button:focus{
     article > div{
         grid-template-columns: 40% 60% !important;
     }
-    #ground-page{
-        padding-top: 65px;
+    section{
+        padding: 20px;
     }
+    #ground-page{
+        padding-top: 85px;
+    }
+    .banner-section, .onSale-section{
+        display: none;
+    }
+
 }
 @media only screen and (min-width:768px) and (max-width:988px) {
     nav > div > button {
@@ -378,6 +407,16 @@ nav > div > button:hover, nav > div > button:focus{
     }
     #ground-page{
         padding-top: 75px;
+    }
+    section{
+        padding: 0px;
+    }
+    #ground-page{
+        padding-top: 100px;
+    }
+    
+    .banner-section, .onSale-section{
+        display: flex;
     }
 }
 @media only screen and (min-width:988px) and (max-width:1279px) {
@@ -414,6 +453,15 @@ nav > div > button:hover, nav > div > button:focus{
     #ground-page{
         padding-top: 100px;
     }
+    .snd{
+        padding: 30px;
+    }
+    #ground-page{
+        padding-top: 125px;
+    }
+    .banner-section, .onSale-section{
+        display: flex;
+    }
 }
 @media only screen and (min-width:1279px) and (max-width:1919px) {
     nav > div > button {
@@ -448,5 +496,8 @@ nav > div > button:hover, nav > div > button:focus{
     }
     #ground-page{
         padding-top: 100px;
+    }
+    .banner-section, .onSale-section{
+        display: flex;
     }
 }
