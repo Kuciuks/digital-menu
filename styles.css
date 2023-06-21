@@ -90,7 +90,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px !important;
     background-color: var(--second)
 }
 
@@ -181,17 +180,24 @@ article:hover, article:focus{
 
 .onSale-section{
     display: flex;
-    justify-content:center;
 }
 
+.banner-section{
+    width: calc(100% + 10px);
+}
+.onSale-section{
+    width: calc(100% + 90px);
+}
 .banner-div{
     grid-area: banner;
 }
 .onSale-div{
     grid-area: sale;
 }
+.onSale-div > div{
+}
 .onSale-div:nth-child(2){
-    margin: 0 35px 0 35px;
+    margin: 0 0px 0 0px;
 }
 
 @keyframes logoAnim {
@@ -372,6 +378,9 @@ nav > div > button:hover, nav > div > button:focus{
     .banner-section, .onSale-section{
         display: none;
     }
+    .onSale-div:nth-child(2){
+        margin: 0 35px 0 35px;
+    }
 
 }
 @media only screen and (min-width:768px) and (max-width:988px) {
@@ -454,13 +463,15 @@ nav > div > button:hover, nav > div > button:focus{
         padding-top: 100px;
     }
     .snd{
-        padding: 30px;
     }
     #ground-page{
         padding-top: 125px;
     }
     .banner-section, .onSale-section{
         display: flex;
+    }
+    .onSale-section{
+        width: calc(100% + 120px) !important;
     }
 }
 @media only screen and (min-width:1279px) and (max-width:1919px) {
@@ -499,5 +510,8 @@ nav > div > button:hover, nav > div > button:focus{
     }
     .banner-section, .onSale-section{
         display: flex;
+    }
+    .onSale-section{
+        width: calc(100% + 130px) !important;
     }
 }
