@@ -190,11 +190,25 @@ article:hover, article:focus{
 }
 .banner-div{
     grid-area: banner;
+    height: 281px;
 }
+.banner-div > div > .img-div{
+    width: 100%;
+    height: 276px;
+    object-fit: contain;
+}
+.banner-div > div > .img-div > img {
+    width: 100%;
+    height: 100%;
+}
+.banner-div > div{
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+}
+
 .onSale-div{
     grid-area: sale;
-}
-.onSale-div > div{
 }
 .onSale-div:nth-child(2){
     margin: 0 0px 0 0px;
@@ -268,6 +282,8 @@ nav > div > button:hover, nav > div > button:focus{
 .banner-section, .onSale-section{
     display: none;
 }
+
+
 @media only screen and (min-width:340px) and (max-width:480px) {
     nav > div > button {
         width: 70px;
@@ -378,9 +394,6 @@ nav > div > button:hover, nav > div > button:focus{
     .banner-section, .onSale-section{
         display: none;
     }
-    .onSale-div:nth-child(2){
-        margin: 0 35px 0 35px;
-    }
 
 }
 @media only screen and (min-width:768px) and (max-width:988px) {
@@ -423,9 +436,15 @@ nav > div > button:hover, nav > div > button:focus{
     #ground-page{
         padding-top: 100px;
     }
-    
     .banner-section, .onSale-section{
         display: flex;
+    }
+    .banner-div{
+        height: 220px;
+    }
+    .banner-div > div > .img-div{
+       width: 100%;
+       height: 215px;
     }
 }
 @media only screen and (min-width:988px) and (max-width:1279px) {
@@ -473,11 +492,18 @@ nav > div > button:hover, nav > div > button:focus{
     .onSale-section{
         width: calc(100% + 120px) !important;
     }
+    .banner-div{
+        height: 300px;
+    }
+    .banner-div > div > .img-div{
+       width: 100%;
+       height: 295px;
+    }
 }
 @media only screen and (min-width:1279px) and (max-width:1919px) {
     nav > div > button {
-        width: 230px;
-        height: 80px;
+        width: 200px;
+        height: 70px;
     }
     nav > div > img {
         width: 45px;
@@ -506,12 +532,20 @@ nav > div > button:hover, nav > div > button:focus{
         font-size: 1.3rem;
     }
     #ground-page{
-        padding-top: 100px;
+        padding-top: 140px;
     }
     .banner-section, .onSale-section{
         display: flex;
     }
     .onSale-section{
         width: calc(100% + 130px) !important;
+    }
+    
+    .banner-div{
+        height: 350px;
+    }
+    .banner-div > div > .img-div{
+       width: 100%;
+       height: 345px;
     }
 }
