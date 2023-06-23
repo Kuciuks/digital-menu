@@ -529,7 +529,7 @@ nav > div > button:hover, nav > div > button:focus{
         font-size: 1rem;
     }
     section{    
-        padding: 20px;
+        padding: 0px;
     }
     #bookBtn::after{
         content: "Book a table";
@@ -553,8 +553,6 @@ nav > div > button:hover, nav > div > button:focus{
     }
     #ground-page{
         padding-top: 100px;
-    }
-    .snd{
     }
     #ground-page{
         padding-top: 125px;
@@ -603,7 +601,7 @@ nav > div > button:hover, nav > div > button:focus{
         font-size: 1.2rem;
     }
     section{    
-        padding: 20px;
+        padding: 0px;
     }
     #bookBtn::after{
         content: "Book a table";
