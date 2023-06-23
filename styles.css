@@ -53,11 +53,19 @@ a:hover{
 }
 
 .logo{
-    width: 200px;
+    width: 300px;
 }
 
 #toggleMenu{
     font-size: 1rem;
+    width: 200px;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 0px;
+    border: 3px solid var(--third);
+    background-color: var(--fourth);
+    color: white;
+    margin-left: 25px;
 }
 
 .fade-out{
@@ -83,7 +91,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: aqua;
+    background-color: var(--first);
     opacity: 1;
 }
 
