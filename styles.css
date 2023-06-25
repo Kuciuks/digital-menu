@@ -1,9 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500;600;800;900&family=Space+Grotesk&display=swap');
 
 :root{
     --first: #6495ed;
-    --second: #0E2954;
+    --second: #071429;
     --third: #333541;
     --fourth: #40404b;
 }
@@ -16,6 +15,7 @@
     font-weight: 200;
 }
 
+/*Bootstrap base layer styling + body*/
 body{
     width: 100vw;
     height: 100%;
@@ -24,6 +24,15 @@ body{
     justify-content: center;
     overflow-x: hidden;
 }
+.container-fluid{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding: 0px;
+}
+
+
+/*Footer styling*/
 footer > div {
     display: flex;
     justify-content: space-evenly;
@@ -45,43 +54,8 @@ a:hover{
     color:orange;
 }
 
-.container-fluid{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    padding: 0px;
-}
 
-.logo{
-    width: 300px;
-}
-
-#toggleMenu{
-    font-size: 1rem;
-    width: 200px;
-    height: 50px;
-    font-size: 1.3rem;
-    border-radius: 0px;
-    border: 3px solid var(--third);
-    background-color: var(--fourth);
-    color: white;
-    margin-left: 25px;
-}
-
-.fade-out{
-    animation: transition 2s forwards;
-}
-
-@keyframes transition {
-    form{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
+/*First page styling*/
 #first-page-intro{
     width: 100vw;
     height: 100vh;
@@ -94,7 +68,35 @@ a:hover{
     background-color: var(--first);
     opacity: 1;
 }
+.fade-out{
+    animation: transition 2s forwards;
+}
+@keyframes transition {
+    form{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.logo{
+    width: 300px;
+}
+#toggleMenu{
+    font-size: 1rem;
+    width: 200px;
+    height: 50px;
+    font-size: 1.3rem;
+    border-radius: 0px;
+    border: 3px solid var(--third);
+    background-color: var(--fourth);
+    color: white;
+    margin-left: 25px;
+}
 
+
+/*Ground page styling*/
 #ground-page{
     width: 100%;
     height: auto;
@@ -112,6 +114,8 @@ a:hover{
     margin: 0;
 }
 
+
+/*Section styling*/
 section{
     width: 100%;
     height: 100%;
@@ -121,6 +125,8 @@ section{
     background-color: var(--second)
 }
 
+
+/*Precise item styling inside article element*/
 .img-div{
     padding-left: 0px;
     grid-area: img;
@@ -128,7 +134,6 @@ section{
     justify-content: center;
     align-items: center;
 }
-
 .h2-div{
     width: 90%;
     height: auto;
@@ -154,7 +159,6 @@ span{
     box-shadow: 0 0 3px rgb(255, 255, 255);
     margin: 7px 7px 7px 0;
 }
-
 .p-div > p{
     font-size: .6rem;
     text-align: center;
@@ -169,11 +173,12 @@ span{
     width: 100%;
     height: 100%;
 }
-
 .img-div img{
     width: 90px;
 }
 
+
+/*Article styling*/
 article{
     height: 105px;
     width: 100%;
@@ -183,7 +188,6 @@ article{
     background-color: var(--third);
     border: 3px var(--fourth) solid;
 }
-
 article > div{
     width: 100%;
     height: 100%;
@@ -192,7 +196,6 @@ article > div{
     grid-template-areas: 'img h2p'
                         'img h2p';
 }
-
 article + div{
     display: flex;
     justify-content: center;
@@ -200,21 +203,15 @@ article + div{
     width: 100%;
     height: 100%;
 }
-
 article:hover, article:focus{
     box-shadow: 0 0 20px var(--first) inset;
     border: 2px var(--first) solid ;
 }
 
-.onSale-section{
-    display: flex;
-}
 
+/*Banner styling*/
 .banner-section{
     width: calc(100% + 10px);
-}
-.onSale-section{
-    width: calc(100% + 90px);
 }
 .banner-div{
     grid-area: banner;
@@ -234,7 +231,18 @@ article:hover, article:focus{
     height: 100%;
     grid-template-columns: 100%;
 }
+.banner-section, .onSale-section{
+    display: none;
+}
 
+
+/*On sale item styling*/
+.onSale-section{
+    display: flex;
+}
+.onSale-section{
+    width: calc(100% + 90px);
+}
 .onSale-div{
     grid-area: sale;
 }
@@ -248,21 +256,8 @@ article:hover, article:focus{
     margin: 0 0px 0 0px;
 }
 
-@keyframes logoAnim {
-    25%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(25deg);
-    }
-    75%{
-        transform: rotate(-25deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
 
+/*Nav styling*/
 nav{
     width: 100%;
     height: auto;
@@ -281,9 +276,28 @@ nav > div > img{
     width: 12px;
     animation: logoAnim 4s  infinite;
 }
+@keyframes logoAnim {
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(25deg);
+    }
+    75%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 
+
+/*Nav button stylings*/
+nav > div > button:hover, nav > div > button:focus{
+    border: 1px white solid !important;
+}
 nav > div > button{
-    background-color: #0E2954 !important;
+    background-color: var(--fourth);
     color: white !important;
     padding: 0 !important;
     height: 25px;
@@ -309,16 +323,12 @@ nav > div > button{
     content: "Locations";
     color: white;
 }
-nav > div > button:hover, nav > div > button:focus{
-    border: 1px white solid !important;
-}
-
-.banner-section, .onSale-section{
-    display: none;
-}
 
 
+/*Breakpoints*/
 @media only screen and (min-width:340px) and (max-width:480px) {
+
+    /*Nav / button / img responsive styling*/
     nav > div > button {
         width: 70px;
     }
@@ -348,6 +358,8 @@ nav > div > button:hover, nav > div > button:focus{
         color: white;
         font-size: .7rem;
     }
+
+    /*Responsive article styling*/
     article{
         height: 140px;
     }
@@ -360,20 +372,28 @@ nav > div > button:hover, nav > div > button:focus{
     .p-div p{
         font-size: 0.8rem;
     }
+
+    /*Ground page responsive styling*/
     #ground-page{
         padding-top: 40px;
     }
+
+    /*Banner responsive styling*/
     .topSide{
         display: none;
     }
     .banner-section, .onSale-section{
         display: none;
     }
+
+    /*Footer responsive styling*/
     footer > div > h2, footer > div > a{
         font-size: 0.8rem;
     }
 }
 @media only screen and (min-width:481px) and (max-width:767px) {
+    
+    /*Nav / button / img responsive styling*/
     nav > div > button {
         width: 95px;
         height: 40px;
@@ -404,6 +424,8 @@ nav > div > button:hover, nav > div > button:focus{
         color: white;
         font-size: .8rem;
     }
+
+    /*Responsive article styling*/
     article{
         height: 200px;
     }
@@ -419,18 +441,26 @@ nav > div > button:hover, nav > div > button:focus{
     section{    
         padding: 20px;
     }
+
+    /*Ground page responsive styling*/
     #ground-page{
         padding-top: 85px;
     }
+
+    /*Banner responsive styling*/
     .banner-section, .onSale-section{
         display: none;
     }
+
+    /*Footer responsive styling*/
     footer > div > h2, footer > div > a{
         font-size: 1rem;
     }
 
 }
 @media only screen and (min-width:768px) and (max-width:988px) {
+    
+    /*Nav / button / img responsive styling*/
     nav > div > button {
         width: 130px;
         height: 50px;
@@ -441,24 +471,6 @@ nav > div > button:hover, nav > div > button:focus{
     nav > div {
         margin: 10px;
     }
-    article{
-        height: 150px;
-    }
-    .img-div img {
-        width: 100px;
-    }
-    .onSale-div{
-        height: 125px;
-    }
-    .h2-div h2{
-        font-size: 1rem;
-    }
-    .p-div p{
-        font-size: .8rem;
-    }
-    section{    
-        padding: 20px;
-    }
     #bookBtn::after{
         content: "Book a table";
         color:white;
@@ -479,15 +491,23 @@ nav > div > button:hover, nav > div > button:focus{
         color: white;
         font-size: .9rem;
     }
-    #ground-page{
-        padding-top: 75px;
+
+    /*Responsive article styling*/
+    article{
+        height: 150px;
     }
-    section{
-        padding: 0px;
+    .img-div img {
+        width: 100px;
     }
-    #ground-page{
-        padding-top: 100px;
+    .h2-div h2{
+        font-size: 1rem;
     }
+    .p-div p{
+        font-size: .8rem;
+    }
+
+
+    /*Banner responsive styling*/
     .banner-section, .onSale-section{
         display: flex;
     }
@@ -498,11 +518,37 @@ nav > div > button:hover, nav > div > button:focus{
        width: 100%;
        height: 215px;
     }
+
+
+    /*On sale responsive styling*/
+    .onSale-div{
+        height: 125px;
+    }
+
+
+    /*Ground page responsive styling*/
+    #ground-page{
+        padding-top: 100px;
+    }
+    
+
+    /*Section responsive styling*/
+    section{    
+        padding: 20px;
+    }
+    section{
+        padding: 0px;
+    }
+
+
+    /*Footer responsive styling*/
     footer > div > h2, footer > div > a{
         font-size: 1.2rem;
     }
 }
 @media only screen and (min-width:988px) and (max-width:1279px) {
+    
+    /*Nav / button / img responsive styling*/
     nav > div > button {
         width: 160px;
         height: 70px;
@@ -513,24 +559,6 @@ nav > div > button:hover, nav > div > button:focus{
     nav > div {
         margin: 10px;
     }
-    article{
-        height: 170px;
-    }
-    .img-div img {
-        width: 130px;
-    }
-    .onSale-div{
-        height: 145px;
-    }
-    .h2-div h2{
-        font-size: 1.2rem;
-    }
-    .p-div p{
-        font-size: 1rem;
-    }
-    section{    
-        padding: 0px;
-    }
     #bookBtn::after{
         content: "Book a table";
         color:white;
@@ -551,17 +579,35 @@ nav > div > button:hover, nav > div > button:focus{
         color: white;
         font-size: 1.3rem;
     }
-    #ground-page{
-        padding-top: 100px;
+
+    
+    /*Responsive article styling*/
+    article{
+        height: 170px;
     }
+    .img-div img {
+        width: 130px;
+    }
+    .h2-div h2{
+        font-size: 1.2rem;
+    }
+    .p-div p{
+        font-size: 1rem;
+    }
+
+    /*Section responsive styling*/
+    section{    
+        padding: 0px;
+    }
+
+    /*Ground page responsive styling*/
     #ground-page{
         padding-top: 125px;
     }
+
+    /*Banner responsive styling*/
     .banner-section, .onSale-section{
         display: flex;
-    }
-    .onSale-section{
-        width: calc(100% + 120px) !important;
     }
     .banner-div{
         height: 300px;
@@ -570,11 +616,23 @@ nav > div > button:hover, nav > div > button:focus{
        width: 100%;
        height: 295px;
     }
+
+    /*On sale responsive styling*/
+    .onSale-section{
+        width: calc(100% + 120px) !important;
+    }
+    .onSale-div{
+        height: 145px;
+    }
+
+    /*Footer responsive styling*/
     footer > div > h2, footer > div > a{
         font-size: 1.4rem;
     }
 }
 @media only screen and (min-width:1279px) and (max-width:1919px) {
+    
+    /*Nav / button / img responsive styling*/
     nav > div > button {
         width: 200px;
         height: 70px;
@@ -585,24 +643,6 @@ nav > div > button:hover, nav > div > button:focus{
     nav > div {
         margin: 10px;
     }
-    article{
-        height: 190px;
-    }
-    .img-div img {
-        width: 140px;
-    }
-    .onSale-div{
-        height: 165px;
-    }
-    .h2-div h2{
-        font-size: 1.4rem;
-    }
-    .p-div p{
-        font-size: 1.2rem;
-    }
-    section{    
-        padding: 0px;
-    }
     #bookBtn::after{
         content: "Book a table";
         color:white;
@@ -623,16 +663,35 @@ nav > div > button:hover, nav > div > button:focus{
         color: white;
         font-size: 1.3rem;
     }
+
+    /*Article responsive styling*/
+    article{
+        height: 190px;
+    }
+    .img-div img {
+        width: 140px;
+    }
+    .h2-div h2{
+        font-size: 1.4rem;
+    }
+    .p-div p{
+        font-size: 1.2rem;
+    }
+
+    /*Section responsive styling*/
+    section{    
+        padding: 0px;
+    }
+
+    /*Ground page responsive styling*/
     #ground-page{
         padding-top: 140px;
     }
+
+    /*Banner responsive styling*/
     .banner-section, .onSale-section{
         display: flex;
     }
-    .onSale-section{
-        width: calc(100% + 130px) !important;
-    }
-    
     .banner-div{
         height: 350px;
     }
@@ -640,6 +699,16 @@ nav > div > button:hover, nav > div > button:focus{
        width: 100%;
        height: 345px;
     }
+
+    /*On sale responsive styling*/
+    .onSale-section{
+        width: calc(100% + 130px) !important;
+    }
+    .onSale-div{
+        height: 165px;
+    }
+    
+    /*Footer responsive styling */
     footer > div > h2, footer > div > a{
         font-size: 1.8rem;
     }
